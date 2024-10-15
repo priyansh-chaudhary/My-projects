@@ -32,7 +32,6 @@ while wrong_guesses < max_attempts and "_" in display:
     guess = input("Guess a letter : ").lower()
 
     if guess in choosen_word :
-        guessed_words.append(choosen_word)
         for index, letter in enumerate(choosen_word) :
             if letter == guess :
                 display[index] = guess
@@ -45,7 +44,6 @@ while wrong_guesses < max_attempts and "_" in display:
 if "_" not in display:
     print(" ".join(choosen_word),"\n")
     print(f"Congratulations! You won!\nYou guessed it only in {wrong_guesses} attempts.")
-    words.remove(choosen_word)
     
 else:
     print(f"\nYou lost! The word was: {choosen_word}")
